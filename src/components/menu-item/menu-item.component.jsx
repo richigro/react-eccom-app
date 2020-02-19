@@ -4,7 +4,7 @@ import './menu-item.styles.scss';
 const MenuItem = ({title, imageUrl, size}) => (
     <div  
         style={{
-            backgroundImage: `url (${imageUrl})`
+            backgroundImage: `url(${imageUrl})`
         }}
         className={`menu-item ${size}`}
     >
