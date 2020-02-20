@@ -13,9 +13,8 @@ function App() {
   return (
     <div>
       <Switch>
-      <Route path="/hats" component={HatsPage}/>  
-      <Route path="/" component={HomePage}/>
-        
+        <Route exact path="/" component={HatsPage}/>  
+        <Route path="/hats" component={HomePage}/>
       </Switch>
     </div>
   );
