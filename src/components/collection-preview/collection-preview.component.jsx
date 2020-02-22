@@ -1,6 +1,7 @@
 import React from 'react';
 import './collection-preview.styles.scss';
 import { findAllByTitle } from '@testing-library/react';
+import CollectionItem from '../collection-item/collection-item.components';
 
 const MAX_NUMBER_OF_ITEMS_PER_PREVIEW = 4;
 const CollectionPreview = ({title, items}) => (
@@ -10,8 +11,8 @@ const CollectionPreview = ({title, items}) => (
             {
             items.filter(
                 (item, idx) => idx < MAX_NUMBER_OF_ITEMS_PER_PREVIEW)
-                .map(item => (
-                <div key={item.id}>{item.name}</div>
+                .map(({id, ...itemsProps}) => (
+                <CollectionItem key={id} {...itemsProps}/>
                 ))
             }
         </div>
